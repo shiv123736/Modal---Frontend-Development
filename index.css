@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+section {
+    height: 100vh;
+    background: url('images/bg.jpg') no-repeat ;
+    background-size: cover;
+    background-position: fixed;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.box {
+    width: 500px;
+    background-color: white;
+    padding: 40px 50px;
+    text-align: center;
+    border-radius: 7px;
+}
+.box h1  {
+    font-size: 3rem;
+    padding-bottom: 20px;
+    color: #333;
+    letter-spacing: 2px;
+
+}
+.box button, .modal-container button {
+    border: 1px solid #4BA7E9;
+    background-color: #4BA7E9;
+    color: white;
+    border-radius: 5px;
+    padding: 5px 10px;
+    letter-spacing: 2px;
+    outline: none;
+}
+.box button:hover, #close-btn:hover {
+    background-color: white;
+    color: #4BA7E9;
+}
+
+/* -------- modal ---------  */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(73, 166, 233, 0.5) ;
+    animation: show 0.5s;
+    transition: 0.5s;
+}
+@keyframes show {
+    from { opacity: 0;}
+    to { opacity: 1;}
+}
+.modal-container {
+    position: relative;
+    width: 500px;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 40px 50px;
+    text-align: center;
+    border-radius: 7px;
+}
+.hide {
+    display: none;
+}
+.modal-container h1 {
+    font-size: 2rem;
+    color: #555;
+}
+#close-btn {
+    position: absolute;
+    top:10px;
+    right: 10px;
+}
+
+
